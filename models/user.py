@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Defines the User class."""
 from models.base_model import Base
@@ -29,4 +28,3 @@ class User(BaseModel, Base):
     last_name = Column(String(128))
     places = relationship("Place", backref="user", cascade="delete")
     reviews = relationship("Review", backref="user", cascade="delete")
-
